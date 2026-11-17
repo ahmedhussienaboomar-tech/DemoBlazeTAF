@@ -1,0 +1,16 @@
+{
+  "email": "test@example.com",
+  "products1":
+  {
+    "name": "Blue Top",
+    "price": "Rs. 500",
+    "quantity": "1",
+    "totalPrice": "Rs. 500"
+  },
+  "messages":
+  {
+    "cartAdded": "Added!",
+    "subscriptionSuccess": "You have been successfully subscribed!",
+    "checkoutMessage": "Checkout"
+  }
+}
