@@ -138,7 +138,6 @@ TestNG's default reports are also generated inside `test-outputs/target/`.
 This framework was **designed and built by me, Ahmed Hussien Aboomar**, as part of my journey in software testing . I worked on every part of it: the framework structure, the utilities, the reporting, logging and video setup, and the test scripts.
 
 - GitHub: [@ahmedhussienaboomar-tech](https://github.com/ahmedhussienaboomar-tech)
-- Related project: [Depi_project](https://github.com/ahmedhussienaboomar-tech/Depi_project)
 <!-- TODO: Add your LinkedIn link -->
 
 ---
