@@ -21,7 +21,6 @@ public class FirefoxFactory extends AbstractDriver {
         options.addArguments("--disable-infobars");
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-gpu");
-        options.addArguments("--starr-maximized");
         if (PropertyReader.getProperty("executionType").equalsIgnoreCase("LocalHeadless") ||
                 PropertyReader.getProperty("executionType").equalsIgnoreCase("Remote")) {
             options.addArguments("--headless");
