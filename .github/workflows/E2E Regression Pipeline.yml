@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 env:
-  TARGET: "*Tests"
+  TARGET: "*Test"
 
 jobs:
   Chrome_Linux-Test:
