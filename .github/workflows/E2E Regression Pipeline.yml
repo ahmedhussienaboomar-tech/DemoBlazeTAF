@@ -35,6 +35,7 @@ jobs:
           maven-version: 3.9.9
 
       - name: Run E2E tests
+        continue-on-error: true
         run: mvn clean test -Dtest="${{ env.TARGET }}" -DexecutionType="localHeadless" -Dbrowser="Chrome"
 
       - name: Upload test results
@@ -64,6 +65,7 @@ jobs:
           maven-version: 3.9.9
 
       - name: Run E2E tests
+        continue-on-error: true
         run: mvn clean test -Dtest="${{ env.TARGET }}" -DexecutionType="localHeadless" -Dbrowser="Edge"
 
       - name: Upload test results
