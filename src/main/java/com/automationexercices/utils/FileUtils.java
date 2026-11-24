@@ -100,24 +100,32 @@ public class FileUtils {
         }
     }
 
+
     // Clean Directory
     public static void cleanDirectory(File file) {
         try {
 
             /*
-             * Use Apache Commons IO to clean the directory contents.
-             *
-             * cleanDirectory() deletes the contents inside the directory
-             * while keeping the directory itself.
-             *
-             * Unlike deleteQuietly(), it does not delete the directory itself.
+             * If directory does not exist, create it.
+             * If it already exists, clean its contents.
              */
 
-            org.apache.commons.io.FileUtils.cleanDirectory(file);
+            if (!file.exists()) {
 
-            LogsManager.info(
-                    "Directory cleaned: " + file.getAbsolutePath()
-            );
+                org.apache.commons.io.FileUtils.forceMkdir(file);
+
+                LogsManager.info(
+                        "Directory created: " + file.getAbsolutePath()
+                );
+
+            } else {
+
+                org.apache.commons.io.FileUtils.cleanDirectory(file);
+
+                LogsManager.info(
+                        "Directory cleaned: " + file.getAbsolutePath()
+                );
+            }
 
         } catch (IOException e) {
 
@@ -129,6 +137,7 @@ public class FileUtils {
             );
         }
     }
+
 
     // Copy Directory
     public static void copyDirectory(File file, File resultsHistoryFolderFile) {
