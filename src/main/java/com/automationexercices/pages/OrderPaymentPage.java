@@ -13,7 +13,6 @@ public class OrderPaymentPage {
 
     private final String orderPaymentEndPoint = "/payment";
 
-
     //locators
 
     private final By nameOnCard = By.xpath("//input[@name='name_on_card']");
